@@ -1,2 +1,2 @@
-# coinTrackin-g-
+# coinTrackin
 Coin Trackin‪g‬
