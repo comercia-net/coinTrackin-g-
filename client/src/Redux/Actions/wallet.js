@@ -4,9 +4,9 @@ import { getCurrentUser, verifySession } from "./auth";
 import walletAlert from "../../services/alerts/wallet";
 import delWalletAlert from "../../services/alerts/delWallet";
 import Swal from "sweetalert2";
-import {  api, PORT } from "../../services/config";
+import { PORT } from "../../services/config";
 
-const URL = `${api}:${PORT}`
+const URL = `${process.env.REACT_APP_API_URL}:${PORT}`
 
 export const addWallet = (wallet_name, wallet_coint, history) => async (
   dispatch
