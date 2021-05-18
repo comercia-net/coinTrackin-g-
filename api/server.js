@@ -25,20 +25,17 @@ app.use(
   cors({
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    origin: `${config.CLIENT}`,
+    origin: `${config.CLIENT}` || "http://localhost:3000",
   })
 );
 
 // Create unique TTL
 // uniqueDB();
 
-
 // Routes
 app.use(router);
 
 // Swagger config
 app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerConfing_users));
-
-
 
 module.exports = app;
