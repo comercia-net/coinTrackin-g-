@@ -25,7 +25,7 @@ app.use(
   cors({
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    origin: `${config.CLIENT}` || "http://localhost:3000",
+    origin: ['http://localhost:3000', `${config.CLIENT}`]
   })
 );
 
