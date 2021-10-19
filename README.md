@@ -74,6 +74,22 @@
 
 - Deploy
 
+    > crear archivo secrets.json
+
+        {
+            "PORT": 3001,
+            "DATABASE_ATLAS": "-------- agregar base de datos ------------",
+            "SECRET": "faysertoken",
+            "URL": "https://api.etherscan.io/api?module=account&action=balancemulti&apikey=869Z76H93375IKC5FXRE2NEEZZTIE3GQ6H",
+            "CLIENT_URL": "*",
+            "NODE_ENV": "development",
+            "DATABASE": "mongodb://localhost:27027/wallet",
+            "PORT_CLIENTS": 3000,
+            "REACT_APP_API_PORT": 3001,
+            "REACT_APP_API_URL": "http://localhost",
+            "DEPLOY":"aws" 
+        }
+
     > No es necesario crear Lambda en aws
     > ```npm deploy```
     > Informacion aws requerida para la primera vez:
@@ -105,7 +121,7 @@
 
     >   npm deploy
 
-    
+
 ***Docker - App - client + api***
 
 - Modificar archivo .env
