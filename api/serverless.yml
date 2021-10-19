@@ -11,7 +11,7 @@ provider:
     DATABASE: ${self:custom.secrets.DATABASE}
     SECRET: ${self:custom.secrets.SECRET}
     URL: ${self:custom.secrets.URL}
-    PORT_CLIENTS: ${self:custom.secrets.[PORT_CLIENTS]}
+    PORT_CLIENTS: ${self:custom.secrets.PORT_CLIENTS}
     CLIENT_URL: ${self:custom.secrets.CLIENT_URL}
     NODE_ENV: ${self:custom.secrets.NODE_ENV}
 functions:

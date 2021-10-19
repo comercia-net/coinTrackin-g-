@@ -21,7 +21,7 @@ app.use(morgan("dev"));
 app.use(cors());
 
 // Connect db
-// require("./db");
+require("./db");
 
 // Routes
 app.use(router);
