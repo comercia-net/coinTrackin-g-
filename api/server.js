@@ -21,7 +21,13 @@ app.use(morgan("dev"));
 app.use(cors());
 
 // Connect db
-require("./db");
+const mongoose = require("./db");
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "error"));
+db.once("open", () => {
+  console.log("db connected");
+});
 
 // Routes
 app.use(router);

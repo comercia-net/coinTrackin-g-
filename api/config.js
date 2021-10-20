@@ -1,6 +1,6 @@
 require("dotenv").config();
 module.exports = {
-  PORT: process.env.PORT,
+  PORT: process.env.API_PORT,
   DATABASE: process.env.DATABASE,
   DATABASE_ATLAS: process.env.DATABASE_ATLAS,
   MONGODB_DB: process.env.MONGODB_DB,

@@ -182,7 +182,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/wallet/dev/1634682658873-2021-10-19T22:30:58.873Z/wallet.zip"
+                "S3Key": "serverless/wallet/dev/1634691715001-2021-10-20T01:01:55.001Z/wallet.zip"
               },
               "Handler": "index.handler",
               "Runtime": "nodejs14.x",
@@ -211,14 +211,14 @@
               "IndexLogGroup"
             ]
           },
-          "IndexLambdaVersionMVkQmkQ7ZahsU4Wdsyk4dxHMMIES4k5jxUgtjeRNs": {
+          "IndexLambdaVersionOEASwgci9Ru9z9ho1uWqqKQLG1wZLhMK1DF1nx5O3s": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "IndexLambdaFunction"
               },
-              "CodeSha256": "GdMNLlAkkDChXqnvx01VchBsHgOyjEjqtNOPGbeVR1A="
+              "CodeSha256": "sD0F5ZJmD2RSYqmkyCrF6Y2MlrZW4N5hOCsQnp8FJgI="
             }
           },
           "ApiGatewayRestApi": {
@@ -554,7 +554,7 @@
               "IndexLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1634682652992": {
+          "ApiGatewayDeployment1634691709156": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -621,7 +621,7 @@
           "IndexLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "IndexLambdaVersionMVkQmkQ7ZahsU4Wdsyk4dxHMMIES4k5jxUgtjeRNs"
+              "Ref": "IndexLambdaVersionOEASwgci9Ru9z9ho1uWqqKQLG1wZLhMK1DF1nx5O3s"
             },
             "Export": {
               "Name": "sls-wallet-dev-IndexLambdaFunctionQualifiedArn"
@@ -834,7 +834,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "IndexLambdaVersionMVkQmkQ7ZahsU4Wdsyk4dxHMMIES4k5jxUgtjeRNs"
+        "versionLogicalId": "IndexLambdaVersionOEASwgci9Ru9z9ho1uWqqKQLG1wZLhMK1DF1nx5O3s"
       }
     },
     "configValidationMode": "warn",
@@ -858,7 +858,7 @@
     "artifact": "/home/fy-bush/Documentos/dev/projects/coinTrackin-g-/api/.serverless/wallet.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/wallet/dev/1634682658873-2021-10-19T22:30:58.873Z",
+    "artifactDirectoryName": "serverless/wallet/dev/1634691715001-2021-10-20T01:01:55.001Z",
     "artifact": "wallet.zip"
   }
 }

@@ -10,12 +10,16 @@
 
     Crear 2 archivos .env
 
-    .env.local  -> Variables de entorno para local y se caragan al realizar "npm start"
     .env -> Variables de entorno al pasar a producción "npm run build"
 
     --Variables--
+
+        # CLIENT
+
+        REACT_APP_API_URL_S3=https://r87in13vb3.execute-api.us-west-2.amazonaws.com/dev
         REACT_APP_API_URL= //Debe indicarse la url de la api
-        REACT_APP_API_PORT= // Debe indicarse el puerto de la api
+        REACT_APP_API_PORT= // Debe indicarse el puerto de la api => importante si se lo levanta en docker
+
 
     /* Funciones y componentes */
 
@@ -27,25 +31,29 @@
 
     /* Estilos y componentes */
 
-    Basados en Material Ui. 
-    Dos temas: claro/oscuro
+        Basados en Material Ui. 
+        Dos temas: claro/oscuro
 
 
 **API**
 
     ```npm install```
 
-    /* Variables de entorno */
+    /* Variables de entorno */ => No requerido crearlo en api, es factible usarlo en raiz del proyecto, excepto por uso local
 
         Crear archivo .env
         
-        PORT=4000    -> Puerto
-        DATABASE=mongodb://localhost ->Dirección de base de datos
-        SECRET=faysertoken -> Frase secreta JWT
-        URL=https://api.etherscan.io/api?module=account&action=balancemulti&apikey=869Z76H93375IKC5FXRE2NEEZZTIE3GQ6H  -> Api etherscan
-        PORT_CLIENTS:3000 -> Puerto de clients
-        CLIENT_URL=http://localhost:3000 -> URL Clients - importante para CORS
-        
+        API_PORT=4000
+        DATABASE_ATLAS= --- base de datos externa como atlas ---
+        URL=https://api.etherscan.io/api?module=account&action=balancemulti&apikey=869Z76H93375IKC5FXRE2NEEZZTIE3GQ6H
+        DATABASE=mongodb -> mongodb si se usa docker || localhost para local
+        MONGODB_DB=wallet || el nombre que corresponda
+        SECRET=faysertoken
+        PORT_CLIENTS=3000 || no requerido por el momento
+        CLIENT_URL=*    || no requerido por el momento
+        NODE_ENV=development
+        DEPLOY=docker
+
         # STAGE
 
         NODE_ENV=development
@@ -136,6 +144,10 @@
 
          MONGODB_DB=wallet || el nombre que corresponda
 
+- .env en raiz de archivo ./cointraking
+
+- Si client no resuelve las variables copiar .env en ./client
+
 - Install en api y client
 
         npm install
@@ -145,3 +157,5 @@
     ```docker-compose build```
 
     ```docker-compose run```
+
+- Nota: Para que todo funcione controlar que los puertos seteados sean los correctos. 

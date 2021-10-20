@@ -7,7 +7,7 @@ const SwaggerDeffinition_users = {
     description: 'Documentation api "Wallet" - Permite llevar a cabo procesos de authenticación, manipular datos del usuario y de billetera. Presenta dos esquemas (User y Wallet). Las rutas estan distribuídas por objetivo (auth:autenticación, user:rutas de usuario, wallet: rutas de wallet). ¡Importante! Se requiere tener instalado Mongodb y NodeJs. Las variables de entorno ver en el README.',
   },
   host: '',
-  basePath: '/',
+  basePath: '/dev',
 };
 
 const optionUserV1={

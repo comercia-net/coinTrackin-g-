@@ -7,7 +7,7 @@ import TotalTable from "./TotalTable";
 import { Button } from "@material-ui/core";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
-import Fade from "./utils/fade";
+// import Fade from "./utils/fade";
 import { useStyles } from "./styles/ui.js";
 
 const WalletDash = ({ user, coins, fixedHeightPaper }) => {
@@ -43,11 +43,11 @@ const WalletDash = ({ user, coins, fixedHeightPaper }) => {
               timeout: 500,
             }}
           >
-            <Fade in={open}>
+            {/* <Fade in={open}> */}
               <div className={classes.paper_modal}>
                 <AddWallet handleClose={handleClose} />
               </div>
-            </Fade>
+            {/* </Fade> */}
           </Modal>
         </Paper>
         <br></br>

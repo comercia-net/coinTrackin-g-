@@ -4,7 +4,7 @@ const config = require("./config");
 let { DATABASE, DATABASE_ATLAS, MONGODB_DB, DEPLOY } = config;
 
 let MONGODB_URI = "";
-if (DEPLOY === "docker") {
+if (DEPLOY !== "aws") {
   MONGODB_URI = `mongodb://${DATABASE}/${MONGODB_DB}`;
 } else {
   MONGODB_URI = DATABASE_ATLAS;

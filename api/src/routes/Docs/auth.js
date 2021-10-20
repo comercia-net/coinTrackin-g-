@@ -10,7 +10,7 @@
 
 /**
  * @swagger
- * /dev/api/auth:
+ * /api/auth:
  *   post:
  *     summary: Sign Up user
  *     description: "Crear usuario: Los datos deben ser enviados por body como se muestra en el ejemplo. Solo admite dos campos requeridos: userName y password (strings). Si la peticion es correcta devuelve json (msj-string y auth-boolean)"
@@ -47,7 +47,7 @@
 
 /**
  * @swagger
- * /dev/api/auth/login:
+ * /api/auth/login:
  *   post:
  *     summary: Login user
  *     description: "Endpoint Login. Requiere pasar por body los campos de userName y password. Al igual que sing up devuelve json(auth-boolean, msj-string y token-requerido para el resto de las funciones que necesiten autenticación)"
@@ -83,7 +83,7 @@
 
 /**
  * @swagger
- * /dev/api/auth/logout:
+ * /api/auth/logout:
  *   post:
  *     summary: Logout user
  *     description: "Cierre de sesión del usuario. Si bien desde el front implica eliminar el token, desde la api se almacena el token en -tokenExpired- con fines de seguridad. Se requiere pasar el token por body."

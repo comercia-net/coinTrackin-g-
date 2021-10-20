@@ -8,8 +8,8 @@ services:
     hostname: apiwallet
     restart: always
     environment:
-      - PORT=${PORT}
-      - SECRET=faysertoken
+      - API_PORT=${API_PORT}
+      - SECRET=${SECRET}
       - URL=${URL}
       - PORT_CLIENTS=${PORT_CLIENTS}
       - CLIENT_URL=${CLIENT_URL}
@@ -22,7 +22,7 @@ services:
     links:
       - mongodb
     ports:
-      - 3001:3001
+      - 4000:4000
     volumes:
       - ./api:/opt/app
 
@@ -54,6 +54,8 @@ services:
     networks: 
       - nginx-proxy 
       - default
+    logging:
+      driver: none
 
 networks:
   nginx-proxy:
